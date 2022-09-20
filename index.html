@@ -3,33 +3,81 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>"디에이드 - 묘해, 너와" 플레이리스트</title>
+	<title>Color Picker</title>
+	<style>
+
+		html{font-family: 'Noto Sans KR', sans;}
+
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin-top: 250px;
+		}
+
+
+		label {
+			color: #000;
+			font-size: 1em;
+			font-weight: 500;
+		}
+
+		#colorpicker{
+			background-color: #fff;
+			padding: 4px;
+			width: 200px;
+			height: 50px;
+			cursor: pointer;
+			border: 1px solid #000;
+			border-radius: 5px;
+			margin: 20px;	
+			outline: none;
+			box-shadow: 2px 2px 8px #000;
+		}
+
+		b{
+			background-color: #fff;
+			padding: 7px;
+			color: #000;
+			border-radius: 5px;
+			border:  1px solid #000;
+		}
+
+		code{
+			font-size: 1.2rem;
+			color: #000;
+			border: 2px solid #000;
+			border-radius: 3px;
+			padding: 5px;
+		}
+
+		#colorCode {font-family: 'Noto Sans KR', sans; font-size: 1rem;}
+</style>
+
+	</style>
 </head>
-
 <body>
-	<h1>디에이드 - 묘해, 너와</h1>
-	<img src="before.jpg">
-<p>
-	<input id="vol" type="range" max="100" min="0">
-	<button id="adeBut">play</button>
-	<audio id="adeSnd" src="ade.mp3"></audio>
-	<button id="stopBut">stop</button>	
-</p>
+	<div class="container">
+		<label for="cPic" class="labelclass">
+			🥰컬러를 선택해주세요🥰
+		</label>
+		
+	<input type="color" id="colorpicker">
+	<div id ="cV"></div>
+		<b>color Code: <code id="colorCode"></code></b>
 
-<script type="text/javascript">
-	vol.value = 100;
-	vol.oninput = function(){
-		adeSnd.volume = vol.value / 100
-	}
+	<script>
 
-	adeBut.onclick = function(){
-		adeSnd.play();
-	}
-	stopBut.onclick = function(){
-		adeSnd.pause();
-	}
-</script>
+		const colorPicker = document.getElementById("colorpicker");
+
+		colorPicker.addEventListener("input",() =>{
+			document.body.style.backgroundColor = colorPicker.value
+			colorCode.innerHTML = colorpicker.value;
+		})
+		
+	</script>
+</div>
 </body>
-
-
 </html>

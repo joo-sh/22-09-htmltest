@@ -3,81 +3,17 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Color Picker</title>
-	<style>
-
-		html{font-family: 'Noto Sans KR', sans;}
-
-
-		.container {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			margin-top: 250px;
-		}
-
-
-		label {
-			color: #000;
-			font-size: 1em;
-			font-weight: 500;
-		}
-
-		#colorpicker{
-			background-color: #fff;
-			padding: 4px;
-			width: 200px;
-			height: 50px;
-			cursor: pointer;
-			border: 1px solid #000;
-			border-radius: 5px;
-			margin: 20px;	
-			outline: none;
-			box-shadow: 2px 2px 8px #000;
-		}
-
-		b{
-			background-color: #fff;
-			padding: 7px;
-			color: #000;
-			border-radius: 5px;
-			border:  1px solid #000;
-		}
-
-		code{
-			font-size: 1.2rem;
-			color: #000;
-			border: 2px solid #000;
-			border-radius: 3px;
-			padding: 5px;
-		}
-
-		#colorCode {font-family: 'Noto Sans KR', sans; font-size: 1rem;}
-</style>
-
-	</style>
+	<title></title>
+	<style type="text/css"></style>
 </head>
+
 <body>
-	<div class="container">
-		<label for="cPic" class="labelclass">
-			🥰컬러를 선택해주세요🥰
-		</label>
-		
-	<input type="color" id="colorpicker">
-	<div id ="cV"></div>
-		<b>color Code: <code id="colorCode"></code></b>
-
-	<script>
-
-		const colorPicker = document.getElementById("colorpicker");
-
-		colorPicker.addEventListener("input",() =>{
-			document.body.style.backgroundColor = colorPicker.value
-			colorCode.innerHTML = colorpicker.value;
-		})
-		
+	<div></div>
+	<script type="text/javascript">
+		let a = 10;
+		let b = 10;
+		console.log(a+b);
 	</script>
-</div>
 </body>
+
 </html>
